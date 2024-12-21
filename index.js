@@ -31,6 +31,8 @@ module.exports = function nodcoSequelizeConfig(config = {}) {
           host: option.host,
           port: option.port,
           dialect: option.dialect,
+          dialectModule: option.dialectModule || null,
+          dialectOptions: option.dialectOptions || null,
           logging: process.env.NODE_ENV !== 'production' ? console.log : false,
         }
       );
