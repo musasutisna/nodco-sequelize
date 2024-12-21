@@ -17,12 +17,14 @@ const nodcoSequelizeConfig = require('@musasutisna/nodco-sequelize');
 
 nodcoSequelizeConfig(
   {
-    host, // database host
-    port, // database port
-    database, // database name
-    username, // database user username
-    password, // database user password
-    dialect // database sequelize dialect
+    host, // string, database host
+    port, // number, database port
+    database, // string, database name
+    username, // string, database user username
+    password, // string, database user password
+    dialect, // string, database sequelize dialect
+    dialectModule, // mixed, database dialect module
+    dialectOptions // mixed, database dialect options
   }
 )
 ```
@@ -37,8 +39,8 @@ nodcoSequelizeConfig(
 
 ```js
 connect(
-  key, // the unique key in config we have on initialize
-  cb // function callback will be call after connected successful
+  key, // string, the unique key in config we have on initialize
+  cb // function, function callback will be call after connected successful
 )
 
 close(
